@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hyperion Hedge — Next-Generation Hedge Management Infrastructure</title>
+  <meta name="description" content="Secure, cloud-native portfolio risk and brokerage integration software for retail investors, RIAs, and OCIOs. Currently in stealth development." />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: linear-gradient(160deg, #0d1f38 0%, #0c1629 55%, #091220 100%);
+      color: #dce8f5;
+      min-height: 100vh;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .container { max-width: 960px; margin: 0 auto; padding: 0 2rem; }
+
+    /* Nav */
+    nav {
+      border-bottom: 1px solid rgba(148,163,184,0.1);
+      padding: 1.25rem 0;
+    }
+    nav .inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    nav .signin {
+      font-size: 0.875rem;
+      color: #94a3b8;
+      letter-spacing: 0.02em;
+    }
+    nav .signin:hover { color: #dce8f5; }
+
+    /* Hero */
+    .hero {
+      padding: 5.5rem 0 4.5rem;
+      text-align: center;
+    }
+    .badge {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #06b6d4;
+      border: 1px solid rgba(6,182,212,0.35);
+      border-radius: 100px;
+      padding: 0.3rem 0.9rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.9rem, 4.5vw, 3.1rem);
+      font-weight: 700;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      margin-bottom: 1.25rem;
+      background: linear-gradient(135deg, #e2eaf4 0%, #93c5fd 55%, #67e8f9 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .tagline {
+      font-size: 1.0625rem;
+      line-height: 1.7;
+      color: #94a3b8;
+      max-width: 600px;
+      margin: 0 auto 2.25rem;
+    }
+    .cta {
+      display: inline-block;
+      background: linear-gradient(135deg, #0891b2, #06b6d4);
+      color: #fff;
+      padding: 0.8rem 2rem;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 0.9375rem;
+      box-shadow: 0 0 28px rgba(6,182,212,0.18);
+    }
+    .cta:hover { opacity: 0.9; }
+
+    /* Divider */
+    .divider { border-top: 1px solid rgba(148,163,184,0.08); margin: 0; }
+
+    /* Cards grid */
+    .section { padding: 4rem 0; }
+    .section-label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #4a7a9b;
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.25rem;
+    }
+    .card {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(148,163,184,0.1);
+      border-radius: 10px;
+      padding: 1.75rem;
+    }
+    .card-bar {
+      width: 28px;
+      height: 3px;
+      background: linear-gradient(90deg, #0891b2, #06b6d4);
+      border-radius: 2px;
+      margin-bottom: 1rem;
+    }
+    .card h3 { font-size: 0.9375rem; font-weight: 600; margin-bottom: 0.5rem; color: #dce8f5; }
+    .card p  { font-size: 0.875rem; line-height: 1.65; color: #7b9ab8; }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid rgba(148,163,184,0.1);
+      padding: 2.5rem 0;
+      margin-top: 2rem;
+    }
+    footer svg { margin-bottom: 1.25rem; }
+    .disclaimer {
+      font-size: 0.8rem;
+      line-height: 1.7;
+      color: #4a6280;
+      max-width: 740px;
+      margin-bottom: 1rem;
+    }
+    .disclaimer strong { color: #5a7a9a; }
+    .copyright { font-size: 0.75rem; color: #334a61; }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="container inner">
+      <svg width="200" height="50" viewBox="0 0 320 80" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Hyperion Hedge">
+        <defs>
+          <linearGradient id="pg" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:#1e40af"/>
+            <stop offset="100%" style="stop-color:#3b82f6"/>
+          </linearGradient>
+          <linearGradient id="ag" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:#0891b2"/>
+            <stop offset="100%" style="stop-color:#06b6d4"/>
+          </linearGradient>
+        </defs>
+        <text x="10" y="35" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="28" font-weight="600" letter-spacing="1" fill="url(#pg)">HYPERION</text>
+        <line x1="10" y1="45" x2="300" y2="45" stroke="#94a3b8" stroke-width="1"/>
+        <text x="10" y="70" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="28" font-weight="600" letter-spacing="3" fill="url(#ag)">HEDGE</text>
+      </svg>
+      <a href="https://demo.hyperionhedge.com/login" class="signin">Client Sign In</a>
+    </div>
+  </nav>
+
+  <main>
+
+    <section class="hero">
+      <div class="container">
+        <div class="badge">Stealth Development</div>
+        <h1>Next-Generation Wealth<br>Management Infrastructure</h1>
+        <p class="tagline">
+          We are building secure, cloud-native software integrations for retail investors,
+          Registered Investment Advisors (RIAs), and Outsourced Chief Investment Officers (OCIOs).
+          Our platform is currently in stealth development.
+        </p>
+        <a href="mailto:contact@hyperionhedge.com" class="cta">Request Early Access</a>
+      </div>
+    </section>
+
+    <div class="container"><div class="divider"></div></div>
+
+    <section class="section">
+      <div class="container">
+        <p class="section-label">Purpose-Built for Serious Advisors</p>
+        <div class="grid">
+          <div class="card">
+            <div class="card-bar"></div>
+            <h3>Retail Investors</h3>
+            <p>Institutional-quality risk metrics and brokerage account aggregation — without the complexity of enterprise platforms.</p>
+          </div>
+          <div class="card">
+            <div class="card-bar"></div>
+            <h3>Registered Investment Advisors</h3>
+            <p>Centralized risk visibility and automated position imports from Schwab Advisor Services and Interactive Brokers.</p>
+          </div>
+          <div class="card">
+            <div class="card-bar"></div>
+            <h3>Outsourced CIOs</h3>
+            <p>Aggregate risk reporting, factor exposure analysis, and audit-ready documentation for institutional mandates.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container"><div class="divider"></div></div>
+
+    <section class="section">
+      <div class="container">
+        <p class="section-label">Secure by Design</p>
+        <div class="grid">
+          <div class="card">
+            <div class="card-bar"></div>
+            <h3>Portfolio Risk Analysis</h3>
+            <p>Factor decomposition, stress testing, and VaR across equities, fixed income, and private holdings.</p>
+          </div>
+          <div class="card">
+            <div class="card-bar"></div>
+            <h3>Direct Brokerage Connectivity</h3>
+            <p>3-legged OAuth integrations with Charles Schwab and Interactive Brokers. No credentials stored in transit.</p>
+          </div>
+          <div class="card">
+            <div class="card-bar"></div>
+            <h3>On-Premises AI</h3>
+            <p>Portfolio data never leaves your environment. AI-assisted hedging recommendations run locally.</p>
+          </div>
+          <div class="card">
+            <div class="card-bar"></div>
+            <h3>SOC 2 Roadmap</h3>
+            <p>US-region cloud hosting, encrypted at rest and in transit, targeting SOC 2 Type II compliance at launch.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <svg width="160" height="40" viewBox="0 0 320 80" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Hyperion Hedge">
+        <defs>
+          <linearGradient id="pg2" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:#1e40af"/>
+            <stop offset="100%" style="stop-color:#3b82f6"/>
+          </linearGradient>
+          <linearGradient id="ag2" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:#0891b2"/>
+            <stop offset="100%" style="stop-color:#06b6d4"/>
+          </linearGradient>
+        </defs>
+        <text x="10" y="35" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="28" font-weight="600" letter-spacing="1" fill="url(#pg2)">HYPERION</text>
+        <line x1="10" y1="45" x2="300" y2="45" stroke="#94a3b8" stroke-width="1"/>
+        <text x="10" y="70" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="28" font-weight="600" letter-spacing="3" fill="url(#ag2)">HEDGE</text>
+      </svg>
+      <p class="disclaimer">
+        <strong>Legal Disclaimer:</strong> Hyperion Hedge LLC is a technology development company.
+        Professional investment advisory services will be provided exclusively through registered
+        entities upon commercial launch. Nothing on this website constitutes investment advice,
+        a solicitation, or an offer to buy or sell any security. Hyperion Hedge LLC is not a
+        registered investment adviser, broker-dealer, or financial planner. All references to
+        portfolio risk analysis and hedging are descriptions of software capabilities under
+        development, not investment recommendations.
+      </p>
+      <p class="copyright">&copy; 2026 Hyperion Hedge LLC. All rights reserved. &nbsp;|&nbsp; contact@hyperionhedge.com</p>
+    </div>
+  </footer>
+
+</body>
+</html>
